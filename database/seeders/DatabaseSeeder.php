@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Planes;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -24,6 +25,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CitySeeder::class,
             AirportSeeder::class,
+            GateSeeder::class,
+            PlaneSeeder::class,
+            FlightSeeder::class,
         ]);
     }
 }

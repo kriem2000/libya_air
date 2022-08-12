@@ -2835,7 +2835,7 @@
                     "homepage": "https://paragonie.com"
                 }
             ],
-            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "description": "PHP 5.x polyfill for random_bytes() and rand() from PHP 7",
             "keywords": [
                 "csprng",
                 "polyfill",

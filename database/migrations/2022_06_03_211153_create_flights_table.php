@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('flights', function (Blueprint $table) {
             $table->bigIncrements("id");
             $table-> integer("flight_num");
-            $table-> datetime("departure_date");
-            $table-> datetime("return_date");
+            $table-> datetime("flight_date");
             $table-> integer("bs_price");
             $table-> integer("ec_price");
             $table-> unsignedBigInteger("plane_id");
@@ -27,6 +26,7 @@ return new class extends Migration
             $table-> unsignedBigInteger("origin_air_id");
             $table-> unsignedBigInteger("departure_gate_id");
             $table-> unsignedBigInteger("origin_gate_id");
+            $table->string("flight_img");
             $table->foreign("plane_id")-> references("id")->on("planes");
             $table->foreign("origin_city")-> references("id")->on("cities");
             $table->foreign("dastination_city")-> references("id")->on("cities");
