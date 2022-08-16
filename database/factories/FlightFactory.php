@@ -24,7 +24,7 @@ class FlightFactory extends Factory
 
         do {
         $origin_city = City::all()->random(1)->first();
-        $origin_air = Airport::where("city_id", $origin_city->id);
+        $origin_air = Airport::where("city_id" , $origin_city->id);
         while($origin_air->count() == 0 ) {
             $origin_city = City::all()->random(1)->first();
             $origin_air = Airport::where("city_id", $origin_city->id);
