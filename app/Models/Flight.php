@@ -21,12 +21,9 @@ class Flight extends Model
         "departure_gate_id",
         "origin_gate_id",
         "flight_img",
-        "plane_id",
-        "origin_city",
-        "dastination_city",
-        "departure_air_id",
-        "origin_air_id",
-        "departure_gate_id",
-        "origin_gate_id"
     ];
+
+    public function city() {
+        return $this->belongsTo(City::class, 'origin_city');
+    }
 }
