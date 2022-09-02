@@ -47,7 +47,7 @@ class FlightFactory extends Factory
         "flight_date" => $this->faker->date(),
         "bs_price" => $this->faker->numberBetween(400, 800),
         "ec_price" => $this->faker->numberBetween(100, 250),
-        "plane_id" => Plane::all()->random(4)->first()->id,
+        "plane_id" => Plane::all()->random(1)->first()->id,
         "origin_city" => $origin_city->id,
         "origin_air_id" => $origin_air->first()->id,
         "origin_gate_id" => $origin_gate->first()->id,

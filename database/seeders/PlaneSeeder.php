@@ -15,6 +15,6 @@ class PlaneSeeder extends Seeder
      */
     public function run()
     {
-        Plane::factory()->count(10)->create();
+        Plane::factory()->count(2)->create();
     }
 }

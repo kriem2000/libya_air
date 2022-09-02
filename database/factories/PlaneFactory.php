@@ -18,10 +18,10 @@ class PlaneFactory extends Factory
     {
         return [
             "plane_num" => $this->faker->unique()->randomNumber(6),
-            "col_num_bs" => $this->faker->unique()->randomNumber(2),
-            "col_num_ec" => $this->faker->unique()->randomNumber(3),
-            "seat_num_bs" => $this->faker->unique()->randomNumber(3),
-            "seat_num_ec" => $this->faker->unique()->randomNumber(3),
+            "col_num_bs" => 2,
+            "col_num_ec" => 3,
+            "seat_num_bs" => 40,
+            "seat_num_ec" => 90,
             ];
     }
 }
