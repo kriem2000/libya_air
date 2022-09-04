@@ -8,7 +8,7 @@ use App\Models\Flight;
 class FlightController extends Controller
 {
     public function index() {
-        $flights = Flight::with(['city'])->get()->flatten();
+        $flights = Flight::with(['city', 'origin_air'])->get()->flatten();
         return response()->json([
             'flights' => $flights,
         ], 200,

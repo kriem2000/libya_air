@@ -23,4 +23,8 @@ class Reservation extends Model
     public function seat() {
         return $this->belongsTo(PlaneSeat::class, 'seat_id');
     }
+
+    public function class() {
+        return $this->belongsTo(PlaneClase::class, 'class_id');
+    }
 }

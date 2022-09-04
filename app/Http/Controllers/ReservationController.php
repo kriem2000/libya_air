@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Flight;
 use App\Models\PaymentStatus;
 use App\Models\PlaneClase;
 use App\Models\PlaneSeat;
@@ -34,8 +35,10 @@ class ReservationController extends Controller
 
         // return the response
         return response()->json([
+            'flight_num' => Flight::find($request->flight_id)->flight_num,
             'reservation' => $reservation,
-            'seat' => $reservation->seat,
+            'seat_num' => $reservation->seat->seat_num,
+            'class_name' => $reservation->class->class_name,
             'success' => true,
             'message' => 'the flight has been reserved successfully',
           ], 200);
